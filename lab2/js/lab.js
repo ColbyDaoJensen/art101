@@ -1,6 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// index.js - create a html file with css file
+// Author: Colby DaoJensen
+// Date: 10/9/24
 
 // Constants
 

@@ -29,8 +29,37 @@ h1 {
 
 /* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
-  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 95%;
   margin-bottom: 10px;
   border: solid 1px #000000;
   background-color: #19e4ff;
+}
+
+#links {
+  padding: 10px;
+  margin-bottom: 10px;
+  text-decoration-color: #ff3773;
+  font-size: medium;
+  font-style: oblique;
+  border: solid 1px #000000;
+  background-color: #009c00;
+  color: #ff3773;
+}
+
+#headshot {
+  float: right;
+  margin: -50px;
+  margin-bottom: 10px;
+  border: solid 10px #002efd;
+}
+
+html, body {
+  font-family: Verdana,sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #000000;
+  align-content: left;
 }

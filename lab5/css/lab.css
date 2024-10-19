@@ -7,3 +7,15 @@
     border: solid 1px #888;
     background-color: #DDD8C4;
   }
+
+#headshot {
+    float: right;
+    margin: 50px;
+    border: solid 10px #002efd;
+  }
+
+.cat-photo {
+    margin: 10px;
+    max-width: 500px;
+    border: solid 1px #000000;
+  }

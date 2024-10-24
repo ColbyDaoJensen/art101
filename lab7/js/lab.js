@@ -1,4 +1,4 @@
-// index.js - arrays and objects
+// index.js - function that changes the array
 // Author: Colby DaoJensen
 // Date: 10/24/24
 
@@ -7,23 +7,20 @@
 function sortUserName() {
     var userName = window.prompt("Hi! Please tell me your name so I can fix it.");
     console.log("userName = ", userName);
-}
-
-// Create object for Main Ride
-myMainRide = {
-    make: "Toyota",
-    model: "Corolla",
-    color: "White",
-    year: 2007,
-    // Defines a function within the object, known as a method
-    // The value is this.year
-    age: function() {
-        return 2024 - this.year;
-    }
+    // Splits the string into an array
+    var nameArray = userName.split('');
+    console.log("nameArray = ", nameArray);
+    // Sorts the array
+    var nameArraySort = nameArray.sort();
+    console.log("nameArraySort = ", nameArraySort);
+    // Joins an array back to a string
+    var nameSorted = nameArraySort.join();
+    console.log("nameSorted = ", nameSorted);
+    
+    // Returns sorted user name
+    return nameSorted;
 }
 
 // output
-document.writeln("Kinds of transportation I use: ", myTransport, "</br>");
-// write an object to a document
-document.writeln("My Main Ride: <pre>", 
-  JSON.stringify(myMainRide, null, '\t'), "</pre>");
+document.writeln("Oh hey, I've fixed your name: ",
+    sortUserName(), "</br>");

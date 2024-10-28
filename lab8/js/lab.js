@@ -1,6 +1,6 @@
-// index.js - function that changes the array
+// index.js - anon function and callbacks
 // Author: Colby DaoJensen
-// Date: 10/28/24
+// Date: 10/31/24
 
 // sortUserName - a function that takes user input to sort the letters of
 // their name

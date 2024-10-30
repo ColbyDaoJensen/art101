@@ -2,25 +2,27 @@
 // Author: Colby DaoJensen
 // Date: 10/31/24
 
-// sortUserName - a function that takes user input to sort the letters of
-// their name
-function sortUserName() {
-    var userName = window.prompt("Hi! Please tell me your name so I can fix it.");
-    console.log("userName = ", userName);
-    // Splits the string into an array
-    var nameArray = userName.split('');
-    console.log("nameArray = ", nameArray);
-    // Sorts the array
-    var nameArraySort = nameArray.sort();
-    console.log("nameArraySort = ", nameArraySort);
-    // Joins an array back to a string
-    var nameSorted = nameArraySort.join();
-    console.log("nameSorted = ", nameSorted);
-    
-    // Returns sorted user name
-    return nameSorted;
+// addThree - adds the number 3 to the value x in the function
+function addThree(x){
+    var results = x + 3;
+    return results;
 }
 
-// output
-document.writeln("Oh hey, I've fixed your name: ",
-    sortUserName(), "</br>");
+// testing function
+console.log("What's 5 plus 3? ", addThree(5));
+console.log("What's 7 plus 3? ", addThree(7));
+
+array = [30, 70, 40, 80, 21];
+console.log("My array: ", array);
+
+var result = array.map(addThree);
+// should return [33, 73, 43, 83, 24]
+console.log("Adding 3 to the array: ", addThree(result));
+
+var result = array.map(function(x){
+    var results = x - 10;
+    return results;
+});
+
+// should return [20, 60, 30, 70, 11]
+console.log("Subtracting 10 from the array: ", result);

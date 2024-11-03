@@ -8,6 +8,13 @@
     background-color: #DDD8C4;
   }
 
+#challenge {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #888;
+    background-color: #DDD8C4;
+  }
+
 #headshot {
     float: right;
     margin: 50px;

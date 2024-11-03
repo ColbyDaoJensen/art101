@@ -1,28 +1,18 @@
+/*
+   lab.js - This simple JavaScript/jQuery script uses buttons to modify some elements on the page
+
+   Requirements: jQuery must be loaded for this script to work.
 // index.js - anon function and callbacks
 // Author: Colby DaoJensen
 // Date: 10/31/24
+*/
 
-// addThree - adds the number 3 to the value x in the function
-function addThree(x){
-    var results = x + 3;
-    return results;
-}
+// add button to challenge section
+$("#challenge").append("<button id='button-challenge'>Make Special</button>");
 
-// testing function
-console.log("What's 5 plus 3? ", addThree(5));
-console.log("What's 7 plus 3? ", addThree(7));
 
-array = [30, 70, 40, 80, 21];
-console.log("My array: ", array);
-
-var result = array.map(addThree);
-// should return [33, 73, 43, 83, 24]
-console.log("Adding 3 to the array: ", addThree(result));
-
-var result = array.map(function(x){
-    var results = x - 10;
-    return results;
+// add a click listener to the challenge button
+$("button-challenge").click(function(){
+    // now add (or subtract) the "special" class to the section
+    $("#challenge").toggleClass("special");
 });
-
-// should return [20, 60, 30, 70, 11]
-console.log("Subtracting 10 from the array: ", result);

@@ -1,28 +1,26 @@
-// index.js - anon function and callbacks
+// index.js - simple JavaScript/jQuery script appends new elements to an output div
 // Author: Colby DaoJensen
 // Date: 11/7/24
 
-// addThree - adds the number 3 to the value x in the function
-function addThree(x){
-    var results = x + 3;
-    return results;
-}
+// genrateRandomText - creates text randomly by using already existing text
+function generateRandomText() {
+    const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    const min = 3;
+    const max = 100;
+    const randLen = Math.floor(Math.random() * (max - min + 1)) + min;
+    // Get a random starting index to slice the Lorem Ipsum text
+    const randStart = Math.floor(Math.random() * (text.length - randLen + 1));
+    // Generate the random Lorem Ipsum-like text
+    return text.slice(randStart, randStart + randLen);
+ }
 
-// testing function
-console.log("What's 5 plus 3? ", addThree(5));
-console.log("What's 7 plus 3? ", addThree(7));
-
-array = [30, 70, 40, 80, 21];
-console.log("My array: ", array);
-
-var result = array.map(addThree);
-// should return [33, 73, 43, 83, 24]
-console.log("Adding 3 to the array: ", addThree(result));
-
-var result = array.map(function(x){
-    var results = x - 10;
-    return results;
+// click listener for button
+$("#make-convo").click(function(){
+    // get new fake dialogue
+    const newText = generateRandomText();
+    // append a new div to our output div
+    $("#output").append('<div class="text"><p>' + newText + '</p></div>');
 });
 
-// should return [20, 60, 30, 70, 11]
-console.log("Subtracting 10 from the array: ", result);
+
+

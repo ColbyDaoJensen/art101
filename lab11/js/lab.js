@@ -1,4 +1,6 @@
-// index.js - JavaScript Events and Forms
+// index.js - This simple JavaScript/jQuery script gets a value from an
+// input field and outputs a modified version.
+
 // Author: Colby DaoJensen
 // Date: 11/11/24
 

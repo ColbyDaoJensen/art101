@@ -1,6 +1,6 @@
-// index.js - anon function and callbacks
+// index.js - JavaScript Events and Forms
 // Author: Colby DaoJensen
-// Date: 10/31/24
+// Date: 11/11/24
 
 // addThree - adds the number 3 to the value x in the function
 function addThree(x){

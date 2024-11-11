@@ -27,5 +27,17 @@ myButton.addEventListener("click", function(){
     var name = document.getElementById("input").value;
     var house = sortingHat(name);
     newText = "<p>The Sorting Hat has sorted you into " + house + "</p>";
-    document.getElementById("output").innerHTML = newText;
-})
+    document.getElementById("#output").innerHTML = newText;
+});
+
+// click listener for button
+$("#submit").click(function(){
+    // gets value of input field
+    const name = $("#input").val();
+    
+    // sorts it
+    house = sortingHat(name);
+
+    // appends a new div to our output div
+    $("#output").html('<div class="text"><p>The Sorting Hat has sorted you into ' + house + '</p></div>');
+});

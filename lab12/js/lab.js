@@ -25,10 +25,8 @@ function sortingHat(str){
 $("#submit").click(function(){
     // gets value of input field
     const name = $("#input").val();
-    
     // sorts it
     house = sortingHat(name);
-
     // appends a new div to our output div
     $("#output").html('<div class="text"><p>The Sorting Hat has sorted you into ' + house + '</p></div>');
 });

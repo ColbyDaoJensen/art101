@@ -1,28 +1,31 @@
-// index.js - anon function and callbacks
+// index.js - conditionals
 // Author: Colby DaoJensen
-// Date: 10/31/24
+// Date: 11/14/24
 
-// addThree - adds the number 3 to the value x in the function
-function addThree(x){
-    var results = x + 3;
-    return results;
+// returns Gryffindor, Ravenclaw, Slytherin, and Hufflepuff
+// depending on length mod 4
+function sortingHat(str){
+    len = str.length;
+    mod = len % 4;
+    if (mod == 0){
+        return Gryffindor;
+    }
+    else if (mod == 1){
+        return Ravenclaw;
+    }
+    else if (mod == 2){
+        return Slytherin;
+    }
+    else if (mod == 3){
+        return Hufflepuff;
+    }
 }
 
-// testing function
-console.log("What's 5 plus 3? ", addThree(5));
-console.log("What's 7 plus 3? ", addThree(7));
-
-array = [30, 70, 40, 80, 21];
-console.log("My array: ", array);
-
-var result = array.map(addThree);
-// should return [33, 73, 43, 83, 24]
-console.log("Adding 3 to the array: ", addThree(result));
-
-var result = array.map(function(x){
-    var results = x - 10;
-    return results;
-});
-
-// should return [20, 60, 30, 70, 11]
-console.log("Subtracting 10 from the array: ", result);
+// testing button
+var myButton = document.getElementById("button");
+myButton.addEventListener("click", function(){
+    var name = document.getElementById("input").value;
+    var house = sortingHat(name);
+    newText = "<p>The Sorting Hat has sorted you into " + house + "</p>";
+    document.getElementById("output").innerHTML = newText;
+})

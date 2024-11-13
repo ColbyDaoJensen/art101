@@ -1,28 +1,40 @@
-// index.js - anon function and callbacks
+// index.js - loops
 // Author: Colby DaoJensen
-// Date: 10/31/24
+// Date: 11/18/24
 
-// addThree - adds the number 3 to the value x in the function
-function addThree(x){
-    var results = x + 3;
-    return results;
+// fizzBuzzBoom - loops over the numbers and outputs the number and the
+// matching text for factors
+function fizzBuzzBoom(maxNums, factorObj){
+    // iterate over all of out numbers
+    for (var num = 0; num < maxNums; num++){
+        // reset output string
+        var outputStr = "";
+        // iterate over the factors we got from the HTML
+        for (var factor in factorObj){
+            // check to see if this num is a multiple of factor
+            if (num % factor == 0){
+                // if yes, then add text to output string
+                outputStr += factorObj[factor];
+            }
+        }
+        // now if we have words in outputStr, format it like this " - Fizzbuzz!"
+        if (outputStr){
+            outputStr = " - " + outputStr + "!";
+        }
+        outputToPage(num.toString() + outputStr);
+    }
 }
 
-// testing function
-console.log("What's 5 plus 3? ", addThree(5));
-console.log("What's 7 plus 3? ", addThree(7));
+function reportError(str){
+    outputEl.innerHTML = "<div class='error'>" + str + "</div>";
+}
 
-array = [30, 70, 40, 80, 21];
-console.log("My array: ", array);
-
-var result = array.map(addThree);
-// should return [33, 73, 43, 83, 24]
-console.log("Adding 3 to the array: ", addThree(result));
-
-var result = array.map(function(x){
-    var results = x - 10;
-    return results;
+// click listener for button
+$("#submit").click(function(){
+    // gets value of input field
+    const name = $("#input").val();
+    // sorts it
+    house = sortingHat(name);
+    // appends a new div to our output div
+    $("#output").html('<div class="text"><p>The Sorting Hat has sorted you into ' + house + '</p></div>');
 });
-
-// should return [20, 60, 30, 70, 11]
-console.log("Subtracting 10 from the array: ", result);

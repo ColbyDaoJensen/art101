@@ -23,6 +23,6 @@
 .special {
     background-color: lavender;
     border: dotted 50px red;
-    color: pink;
+    color: rgb(72, 0, 82);
     font-weight: bold;
  }

@@ -22,6 +22,7 @@ $('activate').click(function(){
         dataType : "json",
         // What do we do when the api call is successful
         //   all the action goes in here
+        
         success: function(data) {
             // do stuff
             console.log(data);
@@ -31,5 +32,19 @@ $('activate').click(function(){
             // do stuff
             console.log("Error:", textStatus, errorThrown);
         }
+        .done(function(data) {
+            console.log(data);
+            // make our JSON data printable
+            var printableData = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            // put data in webpage
+            // $("#output").append("<p>" + JSON.stringify(data));
+            // $("#output").append("<p>Here's what you should do when you are bored: <b>" + data.activity);
+            // $("#output").append(printableData);
+            // $("#output").append("<p>The most stable smart man in the room says: <b>" + data.quote);
+            $("#title").html(data.title)
+            $("#output").append("<img src=" + data.url + ">");
+            $("#output").append("<p>" + data.explanation);
+    
+        })
     })
 });
